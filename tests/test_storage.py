@@ -25,7 +25,7 @@ def test_storage_file_on_s3(mocker, infile):
     Writes content from one file-like to s3
     """
     client = mocker.Mock()
-    mocker.path.object(client, "upload_fileobj")
+    mocker.patch.object(client, "upload_fileobj")
 
     storage.s3(client,
                infile,
