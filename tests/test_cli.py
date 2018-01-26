@@ -9,6 +9,7 @@ url = "mysql://user:pass@example.com:3608/dbname"
 def parser():
     return cli.create_parser()
 
+
 def test_parser_without_driver(parser):
     """
     Without a specified driver the parser will exit
